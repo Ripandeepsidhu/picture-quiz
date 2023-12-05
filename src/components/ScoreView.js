@@ -1,7 +1,12 @@
 import React from "react";
 
-const ScoreViewView = () => {
-    return <div>ScoreView</div>;
+const ScoreView = () => {
+    return (
+        <div>
+            <p> You score 1 out of 6 </p>
+            <button> Reset </button>
+        </div>
+    );
 };
 
-export default Scoreview;
+export default ScoreView;
