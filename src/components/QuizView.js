@@ -14,9 +14,9 @@ const QuizView = () => {
 
 
         <div className="answer">
-            <button></button>
-            <button></button>
-            <button></button>
+            <button>12121</button>
+            <button>1212</button>
+            <button>12121</button>
         </div>
     </>
     )
