@@ -8,14 +8,14 @@ function App() {
       question: "Match the picture with the correct word",
       answer: [
         { text: "beer" },
-        { text: "bear" },
+        { text: "bear", isCorrect: true },
         { text: "bare" },
       ],
     },
     {
       question: "Match the picture with the correct word",
       answer: [
-        { text: "fox" },
+        { text: "fox", isCorrect: true },
         { text: "box" },
         { text: "pox" },
       ],
@@ -24,14 +24,14 @@ function App() {
       question: "Match the picture with the correct word",
       answer: [
         { text: "here" },
-        { text: "hare" },
+        { text: "hare", isCorrect: true },
         { text: "hear" },
       ],
     },
     {
       question: "Match the picture with the correct word",
       answer: [
-        { text: "cat" },
+        { text: "cat", isCorrect: true },
         { text: "bat" },
         { text: "rat" },
       ],
@@ -41,22 +41,22 @@ function App() {
       answer: [
         { text: "bog" },
         { text: "log" },
-        { text: "dog" },
+        { text: "dog", isCorrect: true },
       ],
     },
     {
       question: "Match the picture with the correct word",
       answer: [
         { text: "dear" },
-        { text: "deer" },
+        { text: "deer", isCorrect: true },
         { text: "beer" },
       ],
     },
   ];
-  
+
   return (
     <div className="App">
-      
+      <h1>Hello world</h1>
     </div>
   );
 }
