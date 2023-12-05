@@ -59,8 +59,8 @@ function App() {
 
   return (
     <div className="App">
-     <ScoreView/>
-     <QuizView/>
+     {/*<ScoreView/>*/}
+     <QuizView questions={questions}/>
     </div>
   );
 }

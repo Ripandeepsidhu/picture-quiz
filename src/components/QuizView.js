@@ -1,22 +1,23 @@
 import React from "react";
 import "./QuizView.css";
-const QuizView = () => {
+
+const QuizView = ({questions}) => {
     return (
     <>
         <div className="question">
             <div className="question-number">
-                <span> Question 1 /5 </span>
+                <span> Question 1 / {questions.length} </span>
             </div>
             <div className="question-text"> 
-                Match the picture with the correct word
+            {questions.question}
             </div>
         </div>
 
 
         <div className="answer">
-            <button>12121</button>
-            <button>1212</button>
-            <button>12121</button>
+            {questions[1].answer.map(({ text, isCorrect })=> (
+                <button key={text}>{text}</button>
+            )) }
         </div>
     </>
     )
