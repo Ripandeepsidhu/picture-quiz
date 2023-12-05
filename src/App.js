@@ -1,6 +1,7 @@
 
 import './App.css';
 import QuizView from './components/QuizView';
+import ScoreView from './components/ScoreView';
 import Scoreview from './components/ScoreView';
 
 function App() {
@@ -58,8 +59,8 @@ function App() {
 
   return (
     <div className="App">
-     <Scoreview/>
-    
+     <ScoreView/>
+     <QuizView/>
     </div>
   );
 }
