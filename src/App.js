@@ -1,23 +1,62 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+
+  const questions = [
+    {
+      question: "Match the picture with the correct word",
+      answer: [
+        { text: "beer" },
+        { text: "bear" },
+        { text: "bare" },
+      ],
+    },
+    {
+      question: "Match the picture with the correct word",
+      answer: [
+        { text: "fox" },
+        { text: "box" },
+        { text: "pox" },
+      ],
+    },
+    {
+      question: "Match the picture with the correct word",
+      answer: [
+        { text: "here" },
+        { text: "hare" },
+        { text: "hear" },
+      ],
+    },
+    {
+      question: "Match the picture with the correct word",
+      answer: [
+        { text: "cat" },
+        { text: "bat" },
+        { text: "rat" },
+      ],
+    },
+    {
+      question: "Match the picture with the correct word",
+      answer: [
+        { text: "bog" },
+        { text: "log" },
+        { text: "dog" },
+      ],
+    },
+    {
+      question: "Match the picture with the correct word",
+      answer: [
+        { text: "dear" },
+        { text: "deer" },
+        { text: "beer" },
+      ],
+    },
+  ];
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
     </div>
   );
 }
