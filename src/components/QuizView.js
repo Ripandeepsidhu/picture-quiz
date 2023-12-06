@@ -15,7 +15,7 @@ const QuizView = ({questions}) => {
 
 
         <div className="answer">
-            {questions[1].answer.map(({ text, isCorrect })=> (
+            {questions[0].answer.map(({ text, isCorrect })=> (
                 <button key={text}>{text}</button>
             )) }
         </div>
