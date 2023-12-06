@@ -9,8 +9,11 @@ const QuizView = ({questions}) => {
                 <span> Question 1 / {questions.length} </span>
             </div>
             <div className="question-text"> 
-            {questions.question}
-            </div>
+                {questions.question}
+            </div> 
+                {questions.image && (
+            <img src={questions.image} alt={`Question ${1}`} />
+        )}
         </div>
 
 
