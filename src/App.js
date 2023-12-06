@@ -3,12 +3,19 @@ import './App.css';
 import QuizView from './components/QuizView';
 import ScoreView from './components/ScoreView';
 import Scoreview from './components/ScoreView';
+import imageOne from "./images/bear.jpg";
+import imageTwo from "./images/fox.jpg";
+import imageThree from "./images/hare.jpg";
+import imageFour from "./images/cat.jpg";
+import imageFive from "./images/dog.jpg";
+import imageSix from "./images/deer.jpg";
 
 function App() {
 
   const questions = [
     {
       question: "Match the picture with the correct word",
+      image: imageOne,
       answer: [
         { text: "beer" },
         { text: "bear", isCorrect: true },
@@ -17,6 +24,7 @@ function App() {
     },
     {
       question: "Match the picture with the correct word",
+      image: imageTwo,
       answer: [
         { text: "fox", isCorrect: true },
         { text: "box" },
@@ -25,6 +33,7 @@ function App() {
     },
     {
       question: "Match the picture with the correct word",
+      image: imageThree,
       answer: [
         { text: "here" },
         { text: "hare", isCorrect: true },
@@ -33,6 +42,7 @@ function App() {
     },
     {
       question: "Match the picture with the correct word",
+      image: imageFour,
       answer: [
         { text: "cat", isCorrect: true },
         { text: "bat" },
@@ -41,6 +51,7 @@ function App() {
     },
     {
       question: "Match the picture with the correct word",
+      image: imageFive,
       answer: [
         { text: "bog" },
         { text: "log" },
@@ -49,6 +60,7 @@ function App() {
     },
     {
       question: "Match the picture with the correct word",
+      image: imageSix,
       answer: [
         { text: "dear" },
         { text: "deer", isCorrect: true },
@@ -59,6 +71,7 @@ function App() {
   
   return (
     <div className="App">
+       <img className='picture' src={imageOne} alt="Bear" />
      {/*<ScoreView/>*/}
      <QuizView questions={questions}/>
     </div>
