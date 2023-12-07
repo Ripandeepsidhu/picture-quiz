@@ -24,4 +24,17 @@
     row-gap: 15px;
     width: 70%;
 }
+#next-button{
+    margin-top: 8px;
+    height: 40px;
+    width: 90px;
+    font-size: 22px;
+    border: none;
+    font-weight: 600;
+    border-radius: 6px;
+}
+#next-button:hover{
+    background-color: black;
+    color: white;
+}
 
