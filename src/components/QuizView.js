@@ -1,27 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import "./QuizView.css";
+import ScoreView from "./ScoreView";
 
 const QuizView = ({questions}) => {
+    const [currentImage,setCurrentImage] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [clickedOption,setClickedOption]= useState(0);
+    const [score, setScore] = useState(0);
+    const changeQuestion = () => {
+        updateScore();
+        if(currentQuestion<questions.length-1)
+        
+        setCurrentQuestion(currentQuestion+1)
+        changeImage();
+        
+    }
+    const changeImage = () => {
+      if(currentQuestion<questions.length-1)
+      setCurrentImage(currentImage+1)
+  }
+  const updateScore =()=> {
+    if(clickedOption===questions[currentQuestion].isCorrect)
+    setScore(score+1)
+  }
     return (
     <>
+    <img className='picture' src={questions[currentImage].image} alt="Bear" />
         <div className="question">
             <div className="question-number">
-                <span> Question 1 / {questions.length} </span>
+                <span> {currentQuestion+1}. / {questions.length} </span>
             </div>
             <div className="question-text"> 
-                {questions.question}
+                {questions[currentQuestion].question}
             </div> 
-                {questions.image && (
-            <img src={questions.image} alt={`Question ${1}`} />
+            {questions.image && (
+            <img src = {[currentImage]} alt={`Question ${currentQuestion}`} />
         )}
         </div>
 
 
         <div className="answer">
-            {questions[0].answer.map(({ text, isCorrect })=> (
-                <button key={text}>{text}</button>
-            )) }
+            {questions[currentQuestion].answer.map(({ text, isCorrect })=>{return (
+                <button onClick={() => setClickedOption(text+1)} key={text}>{text}</button>
+            )}) }
         </div>
+        <input onClick={changeQuestion} type="button" value= "Next" id="next-button"/>
     </>
     )
 };
