@@ -1,7 +1,6 @@
 
 import './App.css';
 import QuizView from './components/QuizView';
-import ScoreView from './components/ScoreView';
 import Scoreview from './components/ScoreView';
 import imageOne from "./images/bear.jpg";
 import imageTwo from "./images/fox.jpg";
@@ -9,9 +8,10 @@ import imageThree from "./images/hare.jpg";
 import imageFour from "./images/cat.jpg";
 import imageFive from "./images/dog.jpg";
 import imageSix from "./images/deer.jpg";
+import { useState } from 'react';
 
 function App() {
-
+  
   const questions = [
     {
       question: "Match the picture with the correct word",
@@ -71,7 +71,7 @@ function App() {
   
   return (
     <div className="App">
-       <img className='picture' src={imageOne} alt="Bear" />
+       
      {/*<ScoreView/>*/}
      <QuizView questions={questions}/>
     </div>
