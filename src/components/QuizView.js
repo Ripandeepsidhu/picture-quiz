@@ -3,6 +3,7 @@ import "./QuizView.css";
 import ScoreView from "./ScoreView";
 
 const QuizView = ({questions}) => {
+<<<<<<< HEAD
     const [currentImage,setCurrentImage] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
     const [clickedOption,setClickedOption]= useState(0);
@@ -23,6 +24,15 @@ const QuizView = ({questions}) => {
     if(clickedOption===questions[currentQuestion].isCorrect)
     setScore(score+1)
   }
+=======
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+   
+    const [clickedOption,setClickedOption]= useState(0);
+    const changeQuestion = () => {
+        if(currentQuestion<questions.length-1)
+        setCurrentQuestion(currentQuestion+1)
+    }
+>>>>>>> 3c2db5fd0507028652457e2685bc2c883168ff10
     return (
     <>
     <img className='picture' src={questions[currentImage].image} alt="Bear" />
@@ -40,9 +50,15 @@ const QuizView = ({questions}) => {
 
 
         <div className="answer">
+<<<<<<< HEAD
             {questions[currentQuestion].answer.map(({ text, isCorrect })=>{return (
                 <button onClick={() => setClickedOption(text+1)} key={text}>{text}</button>
             )}) }
+=======
+            {questions[currentQuestion].answer.map(({ text, isCorrect })=> (
+                <button onClick={() => setClickedOption(i+1)} key={text}>{text}</button>
+            )) }
+>>>>>>> 3c2db5fd0507028652457e2685bc2c883168ff10
         </div>
         <input onClick={changeQuestion} type="button" value= "Next" id="next-button"/>
     </>
