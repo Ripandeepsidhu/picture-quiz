@@ -1,4 +1,3 @@
-
 import './App.css';
 import QuizView from './components/QuizView';
 import Scoreview from './components/ScoreView';
@@ -10,6 +9,7 @@ import imageFive from "./images/dog.jpg";
 import imageSix from "./images/deer.jpg";
 import Register from "./components/Register";
 import { useState } from 'react';
+
 
 function App() {
   
