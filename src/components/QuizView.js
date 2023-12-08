@@ -4,27 +4,45 @@ import ScoreView from "./ScoreView";
 
 const QuizView = ({questions}) => {
     const [currentImage,setCurrentImage] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [currentQuestion, setCurrentQuestion] = useState(0);
     const [clickedOption,setClickedOption]= useState(0);
     const [score, setScore] = useState(0);
+    const [showResult, setShowResult]= useState(false);
+
     const changeQuestion = () => {
         updateScore();
-        if(currentQuestion<questions.length-1)
-        
+        if(currentQuestion<questions.length-1){
         setCurrentQuestion(currentQuestion+1)
         changeImage();
-        
-    }
+        setClickedOption(0);  
+        }else{
+        setShowResult(true)
+        }}
+    
     const changeImage = () => {
-      if(currentQuestion<questions.length-1)
-      setCurrentImage(currentImage+1)
-  }
-  const updateScore =()=> {
-    if(clickedOption===questions[currentQuestion].isCorrect)
-    setScore(score+1)
-  }
+        if(currentQuestion<questions.length-1)
+        setCurrentImage(currentImage+1)
+         }
+
+    const updateScore =()=> {
+        if(clickedOption===questions[currentQuestion].answer)
+        setScore(score+1)
+        }
+ 
+    const resetAll =()=>{
+        setShowResult(false);
+        setClickedOption(0);
+        setScore(0);
+        setCurrentImage(0);
+        setCurrentQuestion(0);
+    }
     return (
-    <>
+    <div>
+    {showResult?
+    (
+        <ScoreView score={score} totalScore={questions.length} tryAgain={resetAll}/>
+    ):(
+        <>
     <img className='picture' src={questions[currentImage].image} alt="Bear" />
         <div className="question">
             <div className="question-number">
@@ -40,13 +58,17 @@ const QuizView = ({questions}) => {
 
 
         <div className="answer">
-            {questions[currentQuestion].answer.map(({ text, isCorrect })=>{return (
-                <button onClick={() => setClickedOption(text+1)} key={text}>{text}</button>
+            {questions[currentQuestion].options.map((option,i)=>{return (
+                <button className={clickedOption===i+1?"checked":null} 
+                onClick={() => setClickedOption(i+1)} key={i}>
+                    {option}
+                </button>
             )}) }
         </div>
         <input onClick={changeQuestion} type="button" value= "Next" id="next-button"/>
-    </>
-    )
-};
+    </>)}
+    
+</div>
+    )}
 
 export default QuizView;

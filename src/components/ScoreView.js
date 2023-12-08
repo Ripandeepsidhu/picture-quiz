@@ -1,13 +1,17 @@
 import React from "react";
 import "./ScoreView.css";
 
-const ScoreView = () => {
+const ScoreView = (props) => {
     
     return (
+        <>
         <div>
-            <p> You score 1 out of 6 </p>
-            <button> Reset </button>
+            <p> Your score:{props.score} </p>
+            <p>Total Score:{props.totalScore}</p>
+            
         </div>
+        <button id="try-button" onClick={props.tryAgain}>Try Again</button>
+        </>
     );
 };
 

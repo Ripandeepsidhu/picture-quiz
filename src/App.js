@@ -18,56 +18,38 @@ function App() {
     {
       question: "Match the picture with the correct word",
       image: imageOne,
-      answer: [
-        { text: "beer" },
-        { text: "bear", isCorrect: true },
-        { text: "bare" },
-      ],
+      options: ["Beer","Bare","Bear"],
+      answer:3
     },
     {
       question: "Match the picture with the correct word",
       image: imageTwo,
-      answer: [
-        { text: "fox", isCorrect: true },
-        { text: "box" },
-        { text: "pox" },
-      ],
+      options: ["Fox","Box","Pox"],
+      answer:1
     },
     {
       question: "Match the picture with the correct word",
       image: imageThree,
-      answer: [
-        { text: "here" },
-        { text: "hare", isCorrect: true },
-        { text: "hear" },
-      ],
+      options: ["Here","Hare","Hear"],
+      answer:2
     },
     {
       question: "Match the picture with the correct word",
       image: imageFour,
-      answer: [
-        { text: "cat", isCorrect: true },
-        { text: "bat" },
-        { text: "rat" },
-      ],
+      options: ["Cat","Bat","Rat"],
+      answer:1
     },
     {
       question: "Match the picture with the correct word",
       image: imageFive,
-      answer: [
-        { text: "bog" },
-        { text: "log" },
-        { text: "dog", isCorrect: true },
-      ],
+      options: ["Bog","Log","Dog"],
+      answer:3
     },
     {
       question: "Match the picture with the correct word",
       image: imageSix,
-      answer: [
-        { text: "dear" },
-        { text: "deer", isCorrect: true },
-        { text: "beer" },
-      ],
+      options: ["Dear","Deer","Beer"],
+      answer:2
     },
   ];
   

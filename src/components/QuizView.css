@@ -42,4 +42,8 @@
     border: none;
     color: white;
 }
-
+.checked{
+    background-color: rgb(2, 31, 13);
+    color:white;
+    box-shadow: 3px 3px 4px 1px rgb(78, 69, 78);
+  }
