@@ -8,6 +8,7 @@ import imageThree from "./images/hare.jpg";
 import imageFour from "./images/cat.jpg";
 import imageFive from "./images/dog.jpg";
 import imageSix from "./images/deer.jpg";
+import Register from "./components/Register";
 import { useState } from 'react';
 
 function App() {
