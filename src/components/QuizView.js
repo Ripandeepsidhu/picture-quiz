@@ -23,6 +23,8 @@ const QuizView = ({questions}) => {
     if(clickedOption===questions[currentQuestion].isCorrect)
     setScore(score+1)
   }
+ 
+
     return (
     <>
     <img className='picture' src={questions[currentImage].image} alt="Bear" />

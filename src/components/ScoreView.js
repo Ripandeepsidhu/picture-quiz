@@ -5,7 +5,7 @@ const ScoreView = () => {
     
     return (
         <div>
-            <p> You score 1 out of 6 </p>
+            <p> You score  out of  </p>
             <button> Reset </button>
         </div>
     );
