@@ -8,11 +8,12 @@ import imageFour from "./images/cat.jpg";
 import imageFive from "./images/dog.jpg";
 import imageSix from "./images/deer.jpg";
 import Register from "./components/Register";
+import PrivateRoute from "./components/PrivateRoute";
 import { useState } from 'react';
 
 
 function App() {
-  
+    
   const questions = [
     {
       question: "Match the picture with the correct word",
@@ -77,6 +78,6 @@ function App() {
      <QuizView questions={questions}/>
     </div>
   );
-}
+};
 
 export default App;
