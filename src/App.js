@@ -13,7 +13,7 @@ import { useState } from 'react';
 
 
 function App() {
-    
+  
   const questions = [
     {
       question: "Match the picture with the correct word",
@@ -58,7 +58,7 @@ function App() {
        
      {/*<ScoreView/>*/}
      <QuizView questions={questions}/>
-    </div>
+    </div>    
   );
 };
 
