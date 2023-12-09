@@ -23,7 +23,7 @@ const handleSubmit = async () => {
         const user = {username, email, password};
         axios.post("/users", user).then(alert("User created!"));
     }
-}
+};
 
     return (
     <div className="container">
