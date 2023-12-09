@@ -17,12 +17,22 @@ const Login = () => {
     <Card>
         <form classname="form-container">
             <label>
-                <input type="text" placeholder="Email" />
+                <input 
+                type="text" 
+                placeholder="Email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label>
-                <input type="password" placeholder="Password" />
+                <input 
+                type="password" 
+                placeholder="Password" 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)} />
             </label>         
-            <button className="btn" type="submit">
+            <button 
+            className="btn" 
+            type="submit">
                 <p>Log in</p>
             </button>
         </form>
