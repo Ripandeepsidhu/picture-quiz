@@ -1,10 +1,13 @@
-import {useState} from "react";
+import { useState } from "react";
 import axios from "axios";
+import { useNavigate} from "react-router-dom";
 import Card from "./Card.js"
 
 const Login = () => {
     const [email, setEmail] = {useState}("");
     const [password, setPassword] = {useState}("");
+
+    const navigate = useNavigate();
 
     const checkUser = (users) => {
         const user = users.find(
@@ -17,6 +20,13 @@ const Login = () => {
       if (email === "" || password === "") {
         alert("All fields are required!");
       }
+
+      const user = await axios
+      .get("/users")
+      .then((res) => checkUser(res.data, email, password))
+      .catch((error) => {
+        console.log(error);
+      })
     }
 
     return (
