@@ -13,7 +13,10 @@ const Login = () => {
     };
 
     const handleSubmit = async () => {
-        
+      e.preventDefault ();
+      if (email === "" || password === "") {
+        alert("All fields are required!");
+      }
     }
 
     return (
