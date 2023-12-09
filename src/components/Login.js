@@ -1,14 +1,15 @@
+import {useState} from "react";
+import axios from "axios";
 import Card from "./Card.js"
 
 const Login = () => {
+    const [email, setEmail] = {useState}("");
+    const [password, setPassword] = {useState}("");
+
     return (
     <div className="container">
     <Card>
         <form classname="form-container">
-            <h1>Log in</h1>
-            <label>
-                <input type="text" placeholder="Name" />
-            </label>
             <label>
                 <input type="text" placeholder="Email" />
             </label>
@@ -16,7 +17,7 @@ const Login = () => {
                 <input type="password" placeholder="Password" />
             </label>         
             <button className="btn" type="submit">
-                <p>Register</p>
+                <p>Log in</p>
             </button>
         </form>
     </Card>
