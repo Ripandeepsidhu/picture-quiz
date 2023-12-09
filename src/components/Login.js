@@ -6,6 +6,12 @@ const Login = () => {
     const [email, setEmail] = {useState}("");
     const [password, setPassword] = {useState}("");
 
+    const checkUser = (users) => {
+        const user = users.find(
+            (user) => user.email === email && user.password === password);
+        if (user.email === email && user.password === password) return user;
+    };
+
     return (
     <div className="container">
     <Card>
