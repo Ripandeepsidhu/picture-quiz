@@ -30,7 +30,10 @@ const Login = () => {
 
       if (user.email === email && user.password === password) {
         navigate("/");
+        localStorage.setItem("user", JSON.stringify(user.id))
       }
+      setEmail("");
+      setPassword("");
     }
 
     return (
@@ -53,7 +56,8 @@ const Login = () => {
             </label>         
             <button 
             className="btn" 
-            type="submit">
+            type="submit" 
+            onClick={handleSubmit}>
                 <p>Log in</p>
             </button>
         </form>
