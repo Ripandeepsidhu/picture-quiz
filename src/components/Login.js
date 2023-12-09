@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Card from "./Card.js"
 
 const Login = () => {
@@ -27,6 +27,10 @@ const Login = () => {
       .catch((error) => {
         console.log(error);
       })
+
+      if (user.email === email && user.password === password) {
+        navigate("/");
+      }
     }
 
     return (
