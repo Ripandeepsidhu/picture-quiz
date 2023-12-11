@@ -1,7 +1,5 @@
 
-import React from "react";
  import { NavLink,Link } from "react-router-dom";
-import { NavLink,Link } from "react-router-dom";
 import "./Header.css";
 import React, { useState } from "react";
 import "./Header.css";
