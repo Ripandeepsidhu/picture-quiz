@@ -8,8 +8,11 @@ import imageFour from "./images/cat.jpg";
 import imageFive from "./images/dog.jpg";
 import imageSix from "./images/deer.jpg";
 import Register from "./components/Register";
+import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import { useState } from 'react';
+import Header from './components/Header';
+import { Route,Routes } from "react-router-dom";
 
 
 function App() {
@@ -53,12 +56,19 @@ function App() {
     },
   ];
   
-  return (
+  return (<>
+    <Header/>
+    <Routes>
+    <Route path="/QuizView" element={<QuizView/>}/>
+      <Route path="/Register" element={<Register/>}/>
+      <Route path="/Login" element={<Login/>}/>
+    </Routes>
     <div className="App">
        
-     {/*<ScoreView/>*/}
+    
      <QuizView questions={questions}/>
-    </div>    
+     
+    </div>    </>
   );
 };
 
