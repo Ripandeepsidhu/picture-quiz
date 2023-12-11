@@ -1,4 +1,4 @@
- import { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Card from "./Card.js"
@@ -15,7 +15,7 @@ const Login = () => {
         if (user.email === email && user.password === password) return user;
     };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
       e.preventDefault ();
       if (email === "" || password === "") {
         alert("All fields are required!");
