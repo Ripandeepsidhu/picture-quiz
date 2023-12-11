@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Card from "./Card.js"
+import Card from "./Card";
+import "./Form.css";
 
 const Login = () => {
     const [email, setEmail] = {useState}("");
@@ -38,7 +39,7 @@ const Login = () => {
 
     return (
     <div className="container">
-    <Card>
+     <Card>
         <form classname="form-container">
             <label>
                 <input 
