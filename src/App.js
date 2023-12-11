@@ -12,7 +12,7 @@ import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import { useState } from 'react';
 import Header from './components/Header';
-import { Route,Routes } from "react-router-dom";
+import { BrowserRouter, Route,Routes } from "react-router-dom";
 
 
 function App() {
