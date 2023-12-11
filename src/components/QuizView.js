@@ -8,7 +8,7 @@ const QuizView = ({questions}) => {
     const [clickedOption,setClickedOption]= useState(0);
     const [score, setScore] = useState(0);
     const [showResult, setShowResult]= useState(false);
-
+    
     const changeQuestion = () => {
         updateScore();
         if(currentQuestion<questions.length-1){
@@ -66,6 +66,7 @@ const QuizView = ({questions}) => {
             )}) }
         </div>
         <input onClick={changeQuestion} type="button" value= "Next" id="next-button"/>
+
     </>)}
     
 </div>
