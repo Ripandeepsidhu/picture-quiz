@@ -1,8 +1,13 @@
+
+import React from "react";
+ import { NavLink,Link } from "react-router-dom";
 import { NavLink,Link } from "react-router-dom";
 import "./Header.css";
 import React, { useState } from "react";
- const Header=()=>{
-   const [menuOpen,setMenuOpen]= useState(false);
+import "./Header.css";
+
+const Header=()=>{
+  const [menuOpen,setMenuOpen]= useState(false);
 
 return( 
    <nav>
@@ -18,7 +23,9 @@ return(
        <NavLink to="/register"> Register user</NavLink>
     </li>
     <li>
+
         <NavLink to="/login">Log in</NavLink>
+
     </li>
     </ul>
     <i className="fas fa-toggle-on"></i>

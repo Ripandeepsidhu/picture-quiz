@@ -10,7 +10,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Header from './components/Header';
-import { Route,Routes } from "react-router-dom";
+import { BrowserRouter, Route,Routes } from "react-router-dom";
 
 
 function App() {

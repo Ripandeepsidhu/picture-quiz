@@ -1,6 +1,7 @@
 import {useState} from "react";
 import axios from "axios";
-import Card from "./Card.js"
+import Card from "./Card";
+import "./Form.css";
 
 const Register = () => {
 const [username, setUsername] = {useState}(""); 
