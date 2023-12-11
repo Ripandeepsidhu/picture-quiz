@@ -4,12 +4,13 @@
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #0f172a;
     color: white;
     position: sticky;
     top: 0;
+    width: 100%;
 }
 
 nav .title {
