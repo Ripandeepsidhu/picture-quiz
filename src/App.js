@@ -10,11 +10,12 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Header from './components/Header';
-import { BrowserRouter, Route,Routes } from "react-router-dom";
-
+import { Route,Routes } from "react-router-dom";
+import "./components/Button.css"
+import { useState } from 'react';
 
 function App() {
-  
+  const [darkMode, setDarkMode] = useState(false);
   const questions = [
     {
       question: "Match the picture with the correct word",
@@ -57,16 +58,37 @@ function App() {
   return (<>
     
     <div  className='App'>
+    <div className="container">
     <Header/>
     <Routes>
-    <Route path="/" element={<home/>}/>
+      <Route path="/" element={<home/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>
     </Routes>
+  
+
+    <div className={darkMode ? "dark-mode" : "light-mode"}>
+        
+        
     <div className="game-container">
+    
+          <div className="switch-checkbox">
+            <label className="switch">
+              <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+              <span className="slider round"> </span>
+            </label> 
+          </div>
+          </div>   
+ 
+    
+      
     <QuizView questions={questions}/>
-     </div>
-    </div>    </>
+    
+    
+        </div>
+    </div>
+    </div>
+     </>
   );
 };
 
