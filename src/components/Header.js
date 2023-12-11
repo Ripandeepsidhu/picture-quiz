@@ -1,20 +1,32 @@
 
-import { Link } from "react-router-dom";
+import React from "react";
+ import { NavLink,Link } from "react-router-dom";
+import "./Header.css";
+import { useState } from "react";
 import "./Header.css";
 
 const Header=()=>{
+  const [menuOpen,setMenuOpen]= useState(false)
 return( <nav>
-    <ul>
+ <Link className="title" to="/"> Quiz..</Link>
+ <div className="menu" onClick={() =>{
+   setMenuOpen(!menuOpen);
+ }}>
+   <span></span>
+   <span></span>
+   <span></span>
+ </div>
+    <ul className={menuOpen ? "open" :"" }>
     <li>
-       <Link to="/"> Quiz..</Link>
+       <NavLink to="/register"> Register user</NavLink>
     </li>
     <li>
-       <Link to="/Register">Register user</Link>
-    </li>
-    <li>
-        <Link to="/Login">Log in</Link>
+
+        <NavLink to="/login">Log in</NavLink>
+
     </li>
     </ul>
+    <i className="fas fa-toggle-on"></i>
     </nav>)
  }
  export default Header;

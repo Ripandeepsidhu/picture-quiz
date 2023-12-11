@@ -1,6 +1,5 @@
 import './App.css';
 import QuizView from './components/QuizView';
-import Scoreview from './components/ScoreView';
 import imageOne from "./images/bear.jpg";
 import imageTwo from "./images/fox.jpg";
 import imageThree from "./images/hare.jpg";
@@ -10,7 +9,6 @@ import imageSix from "./images/deer.jpg";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
-import { useState } from 'react';
 import Header from './components/Header';
 import { BrowserRouter, Route,Routes } from "react-router-dom";
 
@@ -57,17 +55,17 @@ function App() {
   ];
   
   return (<>
+    
+    <div  className='App'>
     <Header/>
     <Routes>
-    <Route path="/QuizView" element={<QuizView/>}/>
-      <Route path="/Register" element={<Register/>}/>
-      <Route path="/Login" element={<Login/>}/>
+    <Route path="/" element={<home/>}/>
+      <Route path="/register" element={<Register/>}/>
+      <Route path="/login" element={<Login/>}/>
     </Routes>
-    <div className="App">
-       
-    
-     <QuizView questions={questions}/>
-     
+    <div className="game-container">
+    <QuizView questions={questions}/>
+     </div>
     </div>    </>
   );
 };
