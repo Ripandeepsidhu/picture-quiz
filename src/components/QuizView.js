@@ -18,11 +18,21 @@ const QuizView = ({questions}) => {
         }else{
         setShowResult(true)
         }}
-    
+    const backQuestion =()=>{
+        if(currentQuestion<questions.length-1){
+            setCurrentQuestion(currentQuestion+1)
+            backImage();
+
+        }
+    }
     const changeImage = () => {
         if(currentQuestion<questions.length-1)
         setCurrentImage(currentImage+1)
          }
+         const backImage = () => {
+            if(currentQuestion>questions.length+1)
+            setCurrentImage(currentImage-1)
+             }
 
     const updateScore =()=> {
         if(clickedOption===questions[currentQuestion].answer)
@@ -65,8 +75,10 @@ const QuizView = ({questions}) => {
                 </button>
             )}) }
         </div>
+        <div className="buttons">
         <input onClick={changeQuestion} type="button" value= "Next" id="next-button"/>
-
+       <input onClick={backQuestion} type="button" value= "Back" id="next-button"/>
+       </div>
     </>)}
     
 </div>
