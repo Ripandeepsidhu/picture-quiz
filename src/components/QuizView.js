@@ -8,20 +8,25 @@ const QuizView = ({questions}) => {
     const [clickedOption,setClickedOption]= useState(0);
     const [score, setScore] = useState(0);
     const [showResult, setShowResult]= useState(false);
+    const [optionClicked, setOptionClicked] = useState(false);
     
     const changeQuestion = () => {
         updateScore();
         if(currentQuestion<questions.length-1){
         setCurrentQuestion(currentQuestion+1)
         changeImage();
-        setClickedOption(0);  
+        setClickedOption(0); 
+        setOptionClicked(false); 
         }else{
         setShowResult(true)
         }}
+
     const backQuestion =()=>{
-        if(currentQuestion<questions.length-1){
-            setCurrentQuestion(currentQuestion+1)
-            backImage();
+        if (currentQuestion > 0) {
+        setCurrentQuestion(currentQuestion - 1);
+        backImage();
+        setClickedOption(0);
+        setOptionClicked(false);
 
         }
     }
@@ -30,13 +35,15 @@ const QuizView = ({questions}) => {
         setCurrentImage(currentImage+1)
          }
          const backImage = () => {
-            if(currentQuestion>questions.length+1)
-            setCurrentImage(currentImage-1)
-             }
+            if (currentImage > 0) {
+                setCurrentImage(currentImage - 1);
+            }
+        };
 
     const updateScore =()=> {
         if(clickedOption===questions[currentQuestion].answer)
         setScore(score+1)
+        setOptionClicked(true);
         }
  
     const resetAll =()=>{
@@ -45,6 +52,7 @@ const QuizView = ({questions}) => {
         setScore(0);
         setCurrentImage(0);
         setCurrentQuestion(0);
+        setOptionClicked(false);
     }
     return (
     <div>
