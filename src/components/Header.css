@@ -8,9 +8,12 @@ nav {
     align-items: center;
     background-color: #0f172a;
     color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
-    width: 100%;
+    width: 615px;
+    height: 70px;
+    
+    
 }
 nav .title {
     font-size: 1.5rem;

@@ -60,7 +60,7 @@ function App() {
     <>
       <BrowserRouter>
         <div className="App">
-          <div className="container">
+          <div className="game-container">
             <Header />
 
             <Routes>
