@@ -27,7 +27,12 @@ const Register = () => {
   };
 
   const handleSubmit = async () => {
-    const user = await axios
+    const user = { username, email, password };
+    axios.post("/users", user).then(alert("User created!"));
+
+
+
+    /*const user = await axios
       .get("/users")
       .then((res) => checkEmail(res.data, email));
 
@@ -36,7 +41,8 @@ const Register = () => {
     } else {
       const user = { username, email, password };
       axios.post("/users", user).then(alert("User created!"));
-    }
+    }*/
+
   };
 
   return (
