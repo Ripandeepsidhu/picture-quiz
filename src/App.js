@@ -67,6 +67,7 @@ function App() {
               <Route path="/" element={<QuizView questions={questions} />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/user" element={<PrivateRoute />} />
             </Routes>
 
             {/*  <div className={darkMode ? "dark-mode" : "light-mode"}>
