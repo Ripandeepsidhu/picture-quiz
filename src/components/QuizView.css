@@ -27,6 +27,7 @@
 #next-button{
     cursor: pointer;
     margin-top: 25px;
+    margin-left: 20px;
     height: 40px;
     width: 90px;
     font-size: 22px;
