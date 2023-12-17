@@ -1,19 +1,17 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "654321",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "username": "Katja",
+      "email": "katjahfs@hotmail.com",
+      "password": "PleaseWork",
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    
+  ]
 }
