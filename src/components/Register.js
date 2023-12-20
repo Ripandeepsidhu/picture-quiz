@@ -27,12 +27,7 @@ const Register = () => {
   };
 
   const handleSubmit = async () => {
-    const user = { username, email, password };
-    axios.post("/users", user).then(alert("User created!"));
-
-
-
-    /*const user = await axios
+        const user = await axios
       .get("/users")
       .then((res) => checkEmail(res.data, email));
 
@@ -40,10 +35,10 @@ const Register = () => {
       alert("User already exist!");
     } else {
       const user = { username, email, password };
-      axios.post("/users", user).then(alert("User created!"));
-    }*/
+      axios.post("/users", user).then(alert("User created!"));   
 
   };
+};
 
   return (
     <div className="container">
