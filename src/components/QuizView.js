@@ -47,7 +47,7 @@ const QuizView = ({questions}) => {
         setCurrentQuestion(0);
     }
     return (
-    <div>
+    <div className="game-container">
     {showResult?
     (
         <ScoreView score={score} totalScore={questions.length} tryAgain={resetAll}/>

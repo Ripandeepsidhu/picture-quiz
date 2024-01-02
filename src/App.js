@@ -62,15 +62,16 @@ function App() {
         <div className="App">
           <div className="container">
             <Header />
-
+            <div className={darkMode ? "dark-mode" : "light-mode"}>
+            <div>
             <Routes>
               <Route path="/" element={<QuizView questions={questions} />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
             </Routes>
 
-            {/*  <div className={darkMode ? "dark-mode" : "light-mode"}>
-              <div className="game-container">
+            
+              
                 <div className="switch-checkbox">
                   <label className="switch">
                     <input
@@ -81,7 +82,7 @@ function App() {
                   </label>
                 </div>
               </div>
-            </div> */}
+            </div> 
           </div>
         </div>
       </BrowserRouter>
