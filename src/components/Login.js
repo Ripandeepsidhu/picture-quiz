@@ -28,8 +28,8 @@ const Login = () => {
 
   const checkUser = (users) => {
     const user = users.find(
-      (user) => user.email === email && user.password === password
-    );
+      (user) => user.email === email && user.password === password);
+      console.log(user)
     if (user.email === email && user.password === password) return user;
   };
 

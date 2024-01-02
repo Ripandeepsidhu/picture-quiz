@@ -5,7 +5,7 @@ import "./Header.css";
 
 const Header=()=>{
   const [menuOpen,setMenuOpen]= useState(false);
-
+  
 
 return(
     <>
@@ -25,8 +25,10 @@ return(
         <NavLink to="/login">Log in</NavLink>
        </li>
     </ul>
-    </nav>
-    </>
+    
+   
+             
+        </nav></>
     );
 
 
