@@ -9,6 +9,7 @@ const QuizView = ({questions}) => {
     const [score, setScore] = useState(0);
     const [showResult, setShowResult]= useState(false);
     const [optionClicked, setOptionClicked] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
     
     const changeQuestion = () => {
         updateScore();
@@ -55,7 +56,9 @@ const QuizView = ({questions}) => {
         setOptionClicked(false);
     }
     return (
-    <div>
+        
+    <div className="game-container">
+        <div className={darkMode ? "dark-mode" : "light-mode"}>
     {showResult?
     (
         <ScoreView score={score} totalScore={questions.length} tryAgain={resetAll}/>
@@ -89,7 +92,16 @@ const QuizView = ({questions}) => {
        </div>
     </>)}
     
-</div>
+    <div className="switch-checkbox">
+                  <label className="switch">
+                    <input
+                      type="checkbox"
+                      onChange={() => setDarkMode(!darkMode)}
+                    />
+                    <span className="slider round"> </span>
+                  </label>
+                </div>
+</div></div>
     )}
 
 export default QuizView;

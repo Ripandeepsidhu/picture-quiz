@@ -60,31 +60,19 @@ function App() {
     <>
       <BrowserRouter>
         <div className="App">
-          <div className="game-container">
+          
             <Header />
-
+            <div>
             <Routes>
               <Route path="/" element={<QuizView questions={questions} />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/user" element={<PrivateRoute />} />
             </Routes>
-
-            {/*  <div className={darkMode ? "dark-mode" : "light-mode"}>
-              <div className="game-container">
-                <div className="switch-checkbox">
-                  <label className="switch">
-                    <input
-                      type="checkbox"
-                      onChange={() => setDarkMode(!darkMode)}
-                    />
-                    <span className="slider round"> </span>
-                  </label>
-                </div>
               </div>
-            </div> */}
-          </div>
-        </div>
+            </div> 
+          
+        
       </BrowserRouter>
     </>
   );
