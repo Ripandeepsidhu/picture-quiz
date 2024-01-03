@@ -11,6 +11,18 @@
       "email": "katjahfs@hotmail.com",
       "password": "PleaseWork",
       "id": 2
+    },
+    {
+      "username": "Fjant",
+      "email": "fjant@fjant.com",
+      "password": "Komigen",
+      "id": 3
+    },
+    {
+      "username": "Job",
+      "email": "j@",
+      "password": "Hej",
+      "id": 4
     }
   ]
 }

@@ -20,22 +20,32 @@ const Register = () => {
     test again => if it works and a user gets saved in db.json
     then the problem might be in checkEmail or the other code in handle submit
   */
-
+  let user
   const checkEmail = (users) => {
-    const user = users.find((user) => user.email === email);
-    if (user) return user;
-  };
+   user = users.find((user) => user.email === email);
+     
+     return user;
+   };
+  // const checkUser = (users) => {
+  //   const user = users.find(
+  //     (user) => user.email === email && user.password === password);
+  //     console.log(user)
+  //   if (user.email === email && user.password === password) return user;
+  // };
 
   const handleSubmit = async () => {
-        const user = await axios
-      .get("/users")
-      .then((res) => checkEmail(res.data, email));
+     const newUser = { username, email, password };
+    // axios.post("/users", newUser).then(alert("User created!"));
 
+      const userList = await axios
+      .get("/users")
+      .then((res) => res.data);
+    checkEmail(userList)
     if (user) {
       alert("User already exist!");
     } else {
-      const user = { username, email, password };
-      axios.post("/users", user).then(alert("User created!"));   
+      // const user = { username, email, password };
+      axios.post("/users", newUser).then(alert("User created!"));   
 
   };
 };
@@ -81,9 +91,9 @@ const Register = () => {
 export default Register;
 
 /*
-const [username, setUsername] = {useState}(""); 
-const [email, setEmail] = {useState}("");
-const [password, setPassword] = {useState}("");
+const [username, setUsername] = useState(""); 
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
 
 const checkEmail = (users) => {
     const user = users.find((user) => user.email === email);
