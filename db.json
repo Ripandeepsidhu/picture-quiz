@@ -7,22 +7,10 @@
       "id": 1
     },
     {
-      "username": "Katja",
-      "email": "katjahfs@hotmail.com",
-      "password": "PleaseWork",
+      "username": "KA",
+      "email": "k@a",
+      "password": "Ka",
       "id": 2
-    },
-    {
-      "username": "Fjant",
-      "email": "fjant@fjant.com",
-      "password": "Komigen",
-      "id": 3
-    },
-    {
-      "username": "Job",
-      "email": "j@",
-      "password": "Hej",
-      "id": 4
     }
   ]
 }
