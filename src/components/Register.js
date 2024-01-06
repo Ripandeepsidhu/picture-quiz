@@ -14,7 +14,8 @@ const Register = () => {
      return user;
    };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault()
      const newUser = { username, email, password };
       const userList = await axios
       .get("/users")
