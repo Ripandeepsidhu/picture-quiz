@@ -25,10 +25,7 @@ return(
         <NavLink to="/login">Log in</NavLink>
        </li>
     </ul>
-    
-   
-             
-        </nav></>
+    </nav></>
     );
 
 
